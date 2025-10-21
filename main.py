@@ -49,5 +49,5 @@ async def ler_pedido(pedido_id: str):
         # Se o ID não está no nosso dicionário, retorna erro 404
         raise HTTPException(status_code=404, detail="Pedido não foi encontrado")
     
-    # Retorna os dados do pedido encontrado (já está como dicionário)
+    # Retorna os dados do pedido encontrado
     return {"pedido_id": pedido_id, "dados": pedidos_db[pedido_id]}
